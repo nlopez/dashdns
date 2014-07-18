@@ -1,0 +1,12 @@
+#!/usr/bin/env jruby
+$:.unshift File.join(File.dirname(__FILE__), %w{.. lib})
+require 'dashdns'
+
+def usage
+  abort 'Usage: ./dashdns.rb example.net'
+end
+
+ARGV.count == 1 || usage
+
+dashdns = Dashdns.new('example.net')
+dashdns.run
