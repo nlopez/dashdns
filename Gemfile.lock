@@ -1,0 +1,12 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    eventmachine (1.0.3)
+    rubydns (0.8.4)
+      eventmachine (~> 1.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rubydns
