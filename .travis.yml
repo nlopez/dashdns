@@ -3,3 +3,4 @@ rvm:
   - jruby-19mode
 java:
   - oraclejdk8
+script: bundle exec rake test
