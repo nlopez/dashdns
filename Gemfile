@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 gem 'rubydns'
-group :development do
-  gem 'rubocop'
-  gem 'warbler'
+group :test do
+gem 'rubocop'
+gem 'warbler'
+gem 'rake'
+gem 'minitest'
 end
