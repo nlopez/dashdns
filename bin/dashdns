@@ -8,5 +8,5 @@ end
 
 ARGV.count == 1 || usage
 
-dashdns = Dashdns.new('example.net')
+dashdns = Dashdns.new(ARGV[0])
 dashdns.run

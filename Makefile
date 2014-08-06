@@ -1,6 +1,6 @@
 NAME=dashdns
 VERSION=0.1
-JAR=tmp/$(NAME).jar
+JAR=$(NAME).jar
 PREFIX=/opt/dashdns
 
 .PHONY: default
@@ -13,15 +13,15 @@ clean:
 	rm -f *.jar
 	rm -rf ./tmp
 
-
-.PHONY: jar
-jar:
-	warble
+tmp:
 	mkdir ./tmp
+
+tmp/$(JAR): tmp
+	warble
 	mv $(JAR) ./tmp/$(JAR)
 
 .PHONY: deb
-deb: $(JAR)
+deb: tmp/$(JAR)
 	fpm -s dir -t deb --deb-user root --deb-group root -a all \
 		-v $(VERSION) -n $(NAME) --prefix $(PREFIX) -C ./tmp .
 
