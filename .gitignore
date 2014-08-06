@@ -1,3 +1,4 @@
 vendor
 *.jar
 .bundle
+*.deb
