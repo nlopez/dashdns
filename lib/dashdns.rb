@@ -4,8 +4,8 @@ require 'ipaddr'
 
 class Dashdns
   INTERFACES = [
-      [:udp, '127.0.0.1', 5300],
-      [:tcp, '127.0.0.1', 5300]
+      [:udp, '0.0.0.0', 5300],
+      [:tcp, '0.0.0.0', 5300]
   ]
 
   Name = Resolv::DNS::Name
