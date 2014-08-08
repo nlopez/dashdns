@@ -1,5 +1,5 @@
 NAME=dashdns
-VERSION=0.2
+VERSION=0.3
 JAR=$(NAME).jar
 PREFIX=/opt/dashdns
 
@@ -19,6 +19,10 @@ tmp:
 tmp/$(JAR): tmp
 	warble
 	mv $(JAR) ./tmp/$(JAR)
+
+.PHONY: run
+run: tmp/$(JAR)
+	./bin/dashdns example.org
 
 .PHONY: deb
 deb: tmp/$(JAR)
